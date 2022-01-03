@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-
+import ThreeInputs from './components/ThreeInputs';
 function App() {
+  let numberArr = [1,2,3,4,5]
+  let name = "Hello Ramp!"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='center'>
+      <h2>Falsy Input</h2>
+      <ThreeInputs input={false}></ThreeInputs>
+      <h2>Array Input</h2>
+      <ThreeInputs input={numberArr}></ThreeInputs>
+      <h2>Any Input</h2>
+      <ThreeInputs input={name}></ThreeInputs>
     </div>
   );
 }
